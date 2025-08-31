@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-column">
+        <div class="search-bar">
+            <input type="text" class="round city-input" placeholder="Enter any city name">
+            <button class="round btn search-btn">Search</button>
+        </div>
+        <div class="location-box">
+            <div class="location">
+                <img src="/assets/icons/location_icon.svg" alt="" class="location-icon">
+                <p class="city-name">London,PK</p>
+            </div>
+            <div class="date-time">
+                <span>12/12/2025</span>
+                <span>Sun</span>
+                <span>12:00</span>
+            </div>
+        </div>
+        <div class="temp-weather-box">
+            <div class="temp-box box">
+                <p class="temp">37°</p>
+                <div class="more-info">
+                    <!-- <p>Feels like : 39.18</p>
+                    <p>Min : 33.89</p>
+                    <p>Max : 33.89</p> -->
+                </div>
+            </div>
+            <div class="weather-box box">
+                <img src="" alt="" class="weather-icon">
+                <p class="condition">Rain</p>
+                <p class="descript blue-sml-txt">Heavy intensity rain</p>
+            </div>
+        </div>
+        <div class="temp-info">
+            <div class="info-box">
+                <div class="wind-icon">
+                    <img id="windArrow" src="/assets/icons/arrow.svg" alt="">
+                    <img src="/assets/icons/directions.svg" alt="">
+                </div>
+                <div class="info-text">
+                    <p class="info-title blue-sml-txt">Wind</p>
+                    <p class="info-value" id="wind-info">11Km/h</p>
+
+                </div>
+            </div>
+            <div class="info-box">
+                <img src="/assets/icons/pressure.svg" alt="">
+                <div class="info-text">
+                    <p class="info-title blue-sml-txt">Pressure</p>
+                    <p class="info-value" id="pressure-info">1005 hPa</p>
+
+                </div>
+            </div>
+            <div class="info-box">
+                <img src="/assets/icons/humidity.svg" alt="">
+                <div class="info-text">
+                    <p class="info-title blue-sml-txt">Humidity</p>
+                    <p class="info-value" id="humidity-info">91%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
