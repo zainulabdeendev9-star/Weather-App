@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56" height="56" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- blur filter -->
+    <filter id="blur" x="-.24684" y="-.27097" width="1.4937" height="1.6939">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="0" dy="4" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA slope="0.05" type="linear" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- clip path for droplet -->
+    <clipPath id="dropletClip">
+      <path d="M22 2C16 12 10 18 10 26a12 12 0 0 0 24 0c0-8-6-14-12-24Z" />
+    </clipPath>
+  </defs>
+
+  <!-- main droplet outline -->
+  <g filter="url(#blur)" transform="translate(6,4)" fill="none" stroke="#57A0EE" stroke-linecap="round" stroke-width="2">
+    <path d="M22 2C16 12 10 18 10 26a12 12 0 0 0 24 0c0-8-6-14-12-24Z" />
+  </g>
+
+  <!-- water wave inside (clipped to droplet) -->
+  <g clip-path="url(#dropletClip)" transform="translate(6,4)">
+    <path stroke="#57A0EE" stroke-width="2" fill="none" d="M12 24 Q18 21, 24 24 T36 24">
+      <animate attributeName="d" dur="3s" repeatCount="indefinite"
+        values="M12 24 Q18 21, 24 24 T36 24;
+                M12 24 Q18 27, 24 24 T36 24;
+                M12 24 Q18 21, 24 24 T36 24" />
+    </path>
+  </g>
+</svg>
