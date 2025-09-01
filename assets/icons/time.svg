@@ -1,0 +1,10 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Clock icon">
+  <title>Clock</title>
+  <!-- outer circle -->
+  <circle cx="12" cy="12" r="9" stroke="#96CFF5" stroke-width="1.8"/>
+  <!-- hour & minute hands -->
+  <path d="M12 7.5v5l3 2" stroke="#96CFF5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 12/3/6/9 tick marks -->
+  <path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2" stroke="#96CFF5" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

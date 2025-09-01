@@ -34,7 +34,7 @@ function displayData(data) {
     currentTemp.innerHTML = `${Math.floor(data.main.temp)}°`
     tempInfo.innerHTML = `<p>Feels like : ${data.main.feels_like}</p>
     <p>Min : ${data.main.temp_min}</p>
-    <p>Max : ${data.main.temp_max}</p>`
+    <p>Max : ${data.main.temp_max}</p>`;
     weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
     weatherCondition.innerHTML = data.weather[0].main
     weatherDescript.innerHTML = data.weather[0].description
@@ -63,3 +63,5 @@ cityInput.addEventListener('keydown',(e)=>{
         searchCity()
     }
 })
+
+
