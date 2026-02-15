@@ -1,7 +1,8 @@
 const cityInput = document.querySelector('.city-input')
 const searchBtn = document.querySelector('.search-btn')
 const cityName = document.querySelector('.city-name')
-const dateTime = document.querySelector('.date-time')
+const dateValue = document.querySelector('.date-value')
+const timeValue = document.querySelector('.time-value')
 const currentTemp = document.querySelector('.temp')
 const tempInfo = document.querySelector('.more-info')
 const weatherIcon = document.querySelector('.weather-icon')
@@ -30,6 +31,8 @@ async function fetchData() {
 }
 
 function displayData(data) {
+    const currentDate = new Date(data.dt*1000)
+
     cityName.innerHTML = `${data.name},${data.sys.country}`
     currentTemp.innerHTML = `${Math.floor(data.main.temp)}°`
     tempInfo.innerHTML = `<p>Feels like : ${data.main.feels_like}</p>
@@ -41,6 +44,8 @@ function displayData(data) {
     windSpeed.innerHTML = `${data.wind.speed}km/h`
     pressure.innerHTML = `${data.main.pressure}hPa`
     humidity.innerHTML = `${data.main.humidity}%`
+    dateValue.textContent = currentDate.toLocaleDateString('en-US',{weekday:'short',day:'2-digit',month:'short',year:'numeric'})
+    timeValue.textContent = currentDate.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'})
     setWindDirection(data.wind.deg)
     cityInput.value = ''
 }
